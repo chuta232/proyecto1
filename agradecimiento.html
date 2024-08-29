@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracias por Jugar</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: url('https://img.freepik.com/vector-gratis/fondo-plano-dia-nacional-ciencia_23-2149283127.jpg');
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transform: scale(0);
+            animation: zoomIn 0.5s forwards;
+        }
+        @keyframes zoomIn {
+            to {
+                transform: scale(1);
+            }
+        }
+        h1 {
+            color: #333;
+            opacity: 0;
+            animation: fadeIn 1s forwards 0.5s;
+        }
+        p {
+            color: #666;
+            font-size: 18px;
+            opacity: 0;
+            animation: fadeIn 1s forwards 1s;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            opacity: 0;
+            animation: fadeIn 1s forwards 1.5s;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #45a049;
+            transform: translateY(-5px);
+        }
+        .exit-button {
+            background-color: #f44336;
+            margin-left: 10px;
+        }
+        .exit-button:hover {
+            background-color: #e53935;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Gracias por Jugar!</h1>
+        <p>Esperamos que hayas disfrutado del juego y aprendido algo nuevo.</p>
+        <p>¡Te esperamos en una próxima partida!</p>
+        <a href="c:\Users\DELL\OneDrive\Escritorio\juego de biologia\HTMLBIOLOGIA.html" class="button">Volver a Jugar</a> <!-- Asegúrate de que este enlace apunte a tu página de inicio -->
+        <button class="button exit-button" onclick="closeWindows()">Salir</button>
+    </div>
+
+    <script>
+        function closeWindows() {
+            if (confirm("¿Estás seguro de que quieres salir?")) {
+                if (window.opener) {
+                    window.opener.close(); // Cierra la ventana del juego
+                }
+                window.close(); // Cierra la ventana actual
+            }
+        }
+    </script>
+</body>
+</html>

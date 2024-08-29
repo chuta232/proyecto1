@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url('https://img.freepik.com/vector-gratis/fondo-plano-dia-nacional-ciencia_23-2149283127.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #ffffff;
+    margin: 0;  
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo blanco semitransparente */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.word {
+    font-size: 24px;
+    letter-spacing: 10px;
+    margin: 20px 0;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.letter-input {
+    width: 40px;
+    font-size: 24px;
+    text-align: center;
+    margin-right: 20px;
+}
+
+#timer {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.pistas {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.message {
+    font-size: 20px;
+    color: green;
+    margin-top: 20px;
+}
+
+.attempts {
+    font-size: 20px;
+    color: red;
+    margin-top: 10px;
+}
+
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); /* Centrar en la pantalla */
+    width: 80%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 15px; /* Redondear las esquinas del modal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra del modal */
+    padding: 20px;
+    z-index: 1000; /* Asegurar que esté sobre otros elementos */
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.modal-button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal-button.cancel {
+    background-color: #f44336; /* Color para botón de cancelar */
+}
+
+#question {
+    font-size: 2.5em; /* Tamaño de la fuente más grande */
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+}

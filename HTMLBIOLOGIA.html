@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego de Biología</title>
+    <link rel="stylesheet" href="CCSBIOLOGIA.css">
+    <script src="JAVABIOLOGIA.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Juego de Biología</h1>
+        <!-- Pregunta y Pistas -->
+        <p id="question">Pregunta: </p>
+        <div class="pistas">
+            <p id="hint1">Pista 1: </p>
+            <p id="hint2">Pista 2: </p>
+        </div>
+        <!-- Temporizador -->
+        <div id="timer">Tiempo restante: 10 segundos</div>
+        <!-- Espacio para mostrar la palabra y los intentos restantes -->
+        <div class="word" id="word">_ _ _ _ _ _ _</div>
+        <input type="text" class="letter-input" id="letter-input" maxlength="1" autofocus>
+        <button onclick="checkLetter()">Probar Letra</button>
+        <div class="message" id="message"></div>
+        <div class="attempts" id="attempts">Intentos restantes: 3</div>
+    </div>
+
+    <!-- Modal for Winning -->
+    <div id="winModal" class="modal">
+        <div class="modal-content">
+            <h2>¡Felicidades!</h2>
+            <p>Has adivinado la palabra. ¿Qué te gustaría hacer ahora?</p>
+            <button id="retryButtonWin" class="modal-button">Sí, quiero volver a intentarlo</button>
+            <button id="closeButtonWin" class="modal-button cancel">No, ya no quiero jugar</button>
+        </div>
+    </div>
+
+    <!-- Modal for Game Over -->
+    <div id="gameOverModal" class="modal">
+        <div class="modal-content">
+            <h2>Juego Terminado</h2>
+            <p>Lo siento, has perdido. ¿Qué te gustaría hacer ahora?</p>
+            <button id="retryButton" class="modal-button">Sí, quiero volver a intentarlo</button>
+            <button id="closeButton" class="modal-button cancel">No, ya no quiero jugar</button>
+        </div>
+    </div>
+</body>
+</html>
